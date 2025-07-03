@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Rights</title>
+    <link rel="icon" type="image/x-icon" href="assets\mahsa-logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+            width: 90vw;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .fallback {
+            text-align: center;
+            margin: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .fallback a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .fallback a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile and Tablet */
+        @media screen and (max-width: 768px) {
+            .image-container {
+                width: 95vw;
+                margin: 10px auto;
+            }
+            .image-container img {
+                margin-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .image-container {
+                width: 98vw;
+                margin: 5px auto;
+            }
+            .image-container img {
+                margin-bottom: 10px;
+            }
+            .fallback {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="assets\Qr.png" alt="Patient Rights Page 1">
+         
+    <div class="fallback">
+        <!-- <p>If the images don't display, view or download them here: 
+            <a href="assets\patient-rights.png" target="_blank">Image 1</a> | 
+            
+        </p> -->
+    </div>
+</body>
+</html>
