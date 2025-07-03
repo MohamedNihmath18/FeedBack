@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient FeedBack</title>
+    <title>Patient Feedback</title>
     <link rel="icon" type="image/x-icon" href="assets\mahsa-logo.png">
     <style>
         * {
@@ -18,69 +18,145 @@
             min-height: 100vh;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            padding: 20px; /* Add some general padding */
         }
-        .image-container {
+        .content-wrapper { /* New wrapper for both elements */
             width: 90vw;
-            max-width: 1000px;
+            max-width: 600px; /* Adjust max-width as needed for content */
             margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .image-container img {
+
+        .qr-section {
+            margin-bottom: 30px; /* Space between QR and link */
+        }
+
+        .qr-section img {
             width: 100%;
-            max-width: 100%;
+            max-width: 300px; /* Max width for the QR image */
             height: auto;
             display: block;
-            margin-bottom: 20px;
+            margin: 0 auto 15px auto; /* Center image and add bottom margin */
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .fallback {
-            text-align: center;
-            margin: 10px;
-            font-size: 1rem;
-            color: #333;
+
+        .qr-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
         }
-        .fallback a {
-            color: #0066cc;
+
+        .separator {
+            margin: 30px 0;
+            border-top: 1px solid #eee;
+            position: relative;
+            height: 1px;
+            background-color: #eee;
+        }
+        .separator::before {
+            content: "OR";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 0 10px;
+            color: #888;
+            font-weight: bold;
+        }
+
+        .link-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .feedback-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #0066cc;
+            color: white;
             text-decoration: none;
-            margin: 0 10px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .fallback a:hover {
-            text-decoration: underline;
+        .feedback-link:hover {
+            background-color: #004d99;
+            transform: translateY(-2px);
         }
+        .feedback-link:active {
+            transform: translateY(0);
+        }
+
 
         /* Media Queries for Mobile and Tablet */
         @media screen and (max-width: 768px) {
-            .image-container {
+            .content-wrapper {
                 width: 95vw;
-                margin: 10px auto;
+                padding: 20px;
             }
-            .image-container img {
-                margin-bottom: 15px;
+            .qr-section img {
+                max-width: 250px;
+                margin-bottom: 10px;
+            }
+            .qr-section p, .link-section p {
+                font-size: 1rem;
+            }
+            .feedback-link {
+                padding: 12px 25px;
+                font-size: 1.1rem;
+            }
+            .separator {
+                margin: 20px 0;
             }
         }
         @media screen and (max-width: 480px) {
-            .image-container {
+            .content-wrapper {
                 width: 98vw;
-                margin: 5px auto;
+                padding: 15px;
             }
-            .image-container img {
-                margin-bottom: 10px;
+            .qr-section img {
+                max-width: 200px;
+                margin-bottom: 8px;
             }
-            .fallback {
-                font-size: 0.9rem;
+            .qr-section p, .link-section p {
+                font-size: 0.95rem;
+            }
+            .feedback-link {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            .separator {
+                margin: 15px 0;
+            }
+            .separator::before {
+                font-size: 0.9em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="assets\Qr.png" alt="Patient Rights Page 1">
-         
-    <div class="fallback">
-        <!-- <p>If the images don't display, view or download them here: 
-            <a href="assets\patient-rights.png" target="_blank">Image 1</a> | 
-            
-        </p> -->
+    <div class="content-wrapper">
+        <div class="qr-section">
+            <p>Scan the QR code with your phone camera:</p>
+            <img src="assets\Qr.png" alt="Patient Feedback QR Code">
+        </div>
+
+        <div class="separator"></div> <div class="link-section">
+            <p>Or click the link below to open the form in your browser:</p>
+            <a href="https://docs.google.com/forms/d/1vOVbFLOqcRnECVnNhLTHG7Y2DAbKkRcRS32Zs7k-IQc/edit?ts=685b63a5#responses"
+               target="_blank"
+               class="feedback-link">
+               Open Patient Feedback Form
+            </a>
+        </div>
     </div>
 </body>
 </html>
